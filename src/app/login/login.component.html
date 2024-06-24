@@ -1,0 +1,23 @@
+<div class="container mt-5">
+        <h3>Login</h3>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <div class="form-group">
+                <label for="loginUsername">Username</label>
+                <input type="text" id="loginUsername" class="form-control" formControlName="loginUsername" required>
+                <div *ngIf="loginForm.get('loginUsername')?.invalid && (loginForm.get('loginUsername')?.dirty || loginForm.get('loginUsername')?.touched)"
+                    class="text-danger">
+                    <div *ngIf="loginForm.get('loginUsername')?.errors?.['required']">Username is required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" class="form-control" formControlName="loginPassword" required>
+                <div *ngIf="loginForm.get('loginPassword')?.invalid && (loginForm.get('loginPassword')?.dirty || loginForm.get('loginPassword')?.touched)"
+                    class="text-danger">
+                    <div *ngIf="loginForm.get('loginPassword')?.errors?.['required']">Password is required.</div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+        </form>
+        <p>Don't have an account? <span class="sign-up-link" (click)="switchToSignUp()">Sign Up</span></p>
+</div>

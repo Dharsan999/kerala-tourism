@@ -1,0 +1,43 @@
+<div>
+    <h2>{{ district.title }}</h2>
+    <p><strong>Zone:</strong> {{ district.zone}}</p>
+    <p><strong>Telephone access code:</strong> {{ district.telephoneAccessCode}}</p>
+    <img [src]="district.image" alt="{{ district.name }}">
+    <p>{{ district.description }}</p>
+    
+    <div>
+      <h3>Tourist Information Offices:</h3>
+      <ul>
+        @for (office of district.touristInformationOffices; track $index) {
+        <li>
+          <strong>{{ office.name }}</strong><br>
+          {{ office.phone }}<br>
+          <a href="mailto:{{ office.email }}">{{ office.email }}</a><br>
+          <a href="{{ office.website }}" target="_blank">{{ office.website }}</a>
+        </li>
+    }
+      </ul>
+    </div>
+  
+    <div>
+      <h3>Getting There:</h3>
+      <ul>
+        <li><strong>By Road:</strong> {{ district.gettingThere.byRoad }}</li>
+        <li><strong>By Rail:</strong> {{ district.gettingThere.byRail }}</li>
+        <li><strong>By Air:</strong> {{ district.gettingThere.byAir }}</li>
+        <li><strong>By Water:</strong> {{ district.gettingThere.byWater }}</li>
+      </ul>
+    </div>
+  
+    <div>
+      <h3>Geographical Information:</h3>
+      <ul>
+        <li><strong>Altitude:</strong> {{ district.geographicalInformation.altitude }}</li>
+        <li><strong>Area:</strong> {{ district.geographicalInformation.area }}</li>
+        <li><strong>Population:</strong> {{ district.geographicalInformation.population }}</li>
+      </ul>
+    </div>
+  
+    <hr>
+  </div>
+  

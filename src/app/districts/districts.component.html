@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <div class="row">
+        @for (district of districts; track district.id) {
+        <div class="col-4 d-flex justify-content-center">
+            <div class="card">
+                <img src="{{district.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{district.title}}</h5>
+                    <p class="card-text">{{district.description}}</p>
+                    <a [routerLink]="['/districts', district.title]" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

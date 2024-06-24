@@ -1,0 +1,22 @@
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    color: #fff; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border: none; 
+  }
+  
+  .carousel-item.active img {
+    height: 350px; 
+  }
+  
+  .carousel-item img {
+    height: 350px; 
+    filter: brightness(70%); 
+  }
+  
+  .carousel-item img:hover {
+    filter: brightness(100%);
+  }
+  .carousel-inner{
+    height: 350px;
+  }
