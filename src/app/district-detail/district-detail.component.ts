@@ -408,7 +408,7 @@ export class DistrictDetailComponent implements OnInit {
       },
     },
     {
-      title: 'Kasargod',
+      title: 'Kasaragod',
       zone: 'North',
       telephoneAccessCode: '+91 499',
       description:

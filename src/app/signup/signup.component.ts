@@ -11,7 +11,6 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './signup.component.scss'
 })
 export class SignupComponent {
-  @Output() toggleForm = new EventEmitter<void>();
   signUpForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -38,7 +37,9 @@ export class SignupComponent {
     }
     return null;
   }
-  switchToLogin(): void {
-    this.toggleForm.emit();
+  @Output() switchTo = new EventEmitter<void>();
+
+  toggleLoginSignup() {
+    this.switchTo.emit();
   }
 }

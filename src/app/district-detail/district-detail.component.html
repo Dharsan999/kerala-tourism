@@ -1,11 +1,11 @@
-<div>
+<div class="district-details">
     <h2>{{ district.title }}</h2>
     <p><strong>Zone:</strong> {{ district.zone}}</p>
     <p><strong>Telephone access code:</strong> {{ district.telephoneAccessCode}}</p>
     <img [src]="district.image" alt="{{ district.name }}">
     <p>{{ district.description }}</p>
     
-    <div>
+    <div class="info-section">
       <h3>Tourist Information Offices:</h3>
       <ul>
         @for (office of district.touristInformationOffices; track $index) {
@@ -19,7 +19,7 @@
       </ul>
     </div>
   
-    <div>
+    <div class="info-section">
       <h3>Getting There:</h3>
       <ul>
         <li><strong>By Road:</strong> {{ district.gettingThere.byRoad }}</li>
@@ -29,7 +29,7 @@
       </ul>
     </div>
   
-    <div>
+    <div class="info-section">
       <h3>Geographical Information:</h3>
       <ul>
         <li><strong>Altitude:</strong> {{ district.geographicalInformation.altitude }}</li>

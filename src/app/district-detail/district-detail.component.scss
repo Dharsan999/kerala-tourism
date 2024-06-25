@@ -1,0 +1,77 @@
+.district-details {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(230, 231, 219, 0.711);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial, sans-serif';
+    margin-top: 200px; 
+
+  
+    h2 {
+      color: #000000;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5rem;
+    }
+  
+    p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #000000;
+  
+      strong {
+        font-weight: bold;
+      }
+    }
+  
+    .district-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+    }
+  
+    .info-section {
+      margin: 2rem 0;
+  
+      h3 {
+        color: #0099ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin: 0.5rem 0;
+          font-size: 1rem;
+          line-height: 1.5;
+          color: #000000;
+  
+          a {
+            color: #0099ff;
+            text-decoration: none;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  
+    hr {
+      margin: 2rem 0;
+      border: 0;
+      height: 1px;
+      background: #ddd;
+    }
+  }
+  

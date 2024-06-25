@@ -13,7 +13,7 @@ import { CommonModule} from '@angular/common';
 export class AuthComponent {
   showLogin: boolean = true;
 
-  toggleForm(): void {
+  toggler() {
     this.showLogin = !this.showLogin;
   }
 }

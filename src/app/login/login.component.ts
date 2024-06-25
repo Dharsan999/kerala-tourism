@@ -11,7 +11,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  @Output() toggleForm = new EventEmitter<void>();
   loginForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -26,8 +25,9 @@ onLogin(): void {
       console.log('Login data:', loginData);
     }
   }
+  @Output() switchTo= new EventEmitter<void>();
 
-  switchToSignUp(): void {
-    this.toggleForm.emit();
+  toggleLoginSignup() {
+    this.switchTo.emit();
   }
 }

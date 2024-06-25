@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
-    template: `
-    <app-login (loggedIn)="handleLogin($event)"></app-login>
-    <app-signup (signedUp)="handleSignup($event)"></app-signup>
-  `,
     styleUrl: './app.component.scss',
-    imports: [RouterOutlet, NavbarComponent]
+    imports: [RouterOutlet, NavbarComponent,LoginComponent,SignupComponent]
 })
 export class AppComponent {
   title = 'kerala-tourism';

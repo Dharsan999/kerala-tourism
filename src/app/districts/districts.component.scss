@@ -1,6 +1,8 @@
 .container {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 150px; 
+
     .card {
         background-color: rgba(230, 231, 219, 0.723);
         border: 1px solid #ccc;
@@ -37,10 +39,5 @@
         }
     }
 }
-body {
-    background-image: url('https://wallpapercave.com/wp/wp2649819.jpg')!important;
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    background-position: center; 
-  }
+
+  
